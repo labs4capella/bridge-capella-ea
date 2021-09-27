@@ -1,0 +1,51 @@
+<!--
+Copyright (c) 2021 THALES GLOBAL SERVICES.
+All right reserved. This program and the accompanying materials are made 
+available under the terms of the Eclipse Public License 2.0
+which is available at https://www.eclipse.org/legal/epl-2.0/
+
+Contributors:
+     Artal Technologies - initial API and implementation
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>CapellaBridge_UML-EA_Cap${capella-version}_v${project.version}-site</artifactId>
+	<version>1.1.0</version>
+	<packaging>eclipse-repository</packaging>
+	<parent>
+		<groupId>CapellaBridge</groupId>
+		<artifactId>com.artal.capella.bridge.parent</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
+		<relativePath>../../Maven/com.artal.capella.bridge.parent</relativePath>
+	</parent>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<target unless="maven.test.skip">
+								<echo message="Create Dropin from CapellaMapping dropin" />
+
+								<zip destfile="${basedir}/target/CapellaBridge_UML-EA_Cap${capella-version}_v${project.version}-dropin.zip">
+									<zipfileset dir="target/repository/features/"
+										prefix="CapellaBridge_UML-EA_v${project.version}/features/" />
+									<zipfileset dir="target/repository/plugins/"
+										prefix="CapellaBridge_UML-EA_v${project.version}/plugins/" />
+								</zip>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

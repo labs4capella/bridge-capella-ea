@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+  <uml:Model xmi:id="MX_EAID_807b89c9-57f0-44ea-9157-8436c5127e8b" name="EA_Model" visibility="public">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAPK_2f43b852-4f7c-4980-9944-dd56e45567b9" name="Transformed from Capella Logical Architecture (partially)">
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_c28c5a52-c79b-48e0-bc8a-ce55daa66553" name="Data"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_2b4ae6dc-6994-47d6-b686-6570a3d738e2" name="Interfaces"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="EAID_2156b6bb-a4a8-40b4-b5ce-ae64299bb881" name="Logical System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6eaffc3b-0628-40c8-a01b-30104b73151bp" aggregation="composite" association="EAID_6eaffc3b-0628-40c8-a01b-30104b73151ba">
+          <type xmi:idref="EAID_6eaffc3b-0628-40c8-a01b-30104b73151b"></type>
+        </ownedAttribute>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_6eaffc3b-0628-40c8-a01b-30104b73151b" name="LC 1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_6eaffc3b-0628-40c8-a01b-30104b73151ba" memberEnd="EAID_6eaffc3b-0628-40c8-a01b-30104b73151btp EAID_6eaffc3b-0628-40c8-a01b-30104b73151bp">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_6eaffc3b-0628-40c8-a01b-30104b73151btp" association="EAID_6eaffc3b-0628-40c8-a01b-30104b73151ba">
+          <type xmi:idref="EAID_2156b6bb-a4a8-40b4-b5ce-ae64299bb881"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_214a1e2c-04e9-4b98-8b54-2f47ae68ad3d" name="Structure">
+        <packagedElement xmi:type="uml:Actor" xmi:id="EAID_03a61a7b-fae2-4cf9-9d3c-1bae9600bf00" name="LA 1"/>
+      </packagedElement>
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements xmi:type="xmi:elements">
+      <element xmi:type="xmi:element" xmiidref="EAPK_2f43b852-4f7c-4980-9944-dd56e45567b9">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_2156b6bb-a4a8-40b4-b5ce-ae64299bb881">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_2f43b852-4f7c-4980-9944-dd56e45567b9" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_6eaffc3b-0628-40c8-a01b-30104b73151b">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_2f43b852-4f7c-4980-9944-dd56e45567b9" owner="EAID_2156b6bb-a4a8-40b4-b5ce-ae64299bb881" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_03a61a7b-fae2-4cf9-9d3c-1bae9600bf00">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+    </elements>
+    <connectors xmi:type="xmi:connectors">
+      <connector xmi:type="xmi:connector" xmiidref="EAID_6eaffc3b-0628-40c8-a01b-30104b73151ba">
+        <source xmi:type="xmi:source" xmiidref="EAID_6eaffc3b-0628-40c8-a01b-30104b73151bp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_6eaffc3b-0628-40c8-a01b-30104b73151btp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+    </connectors>
+  </xmi:Extension>
+</xmi:XMI>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="com.thalesgroup.capella.bridge.uml.ea.feature"/>
+   <category-def name="CapellaEABridge" label="Capella to Enterprise Architect bridge">
+      <description>
+         This feature provides the tools to transform a Capella model
+to a XMI/UML file compatible with Enterprise Architect.
+      </description>
+   </category-def>
+</site>

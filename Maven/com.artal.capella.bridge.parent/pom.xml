@@ -1,0 +1,154 @@
+<!--
+Copyright (c) 2021 THALES GLOBAL SERVICES.
+All right reserved. This program and the accompanying materials are made 
+available under the terms of the Eclipse Public License 2.0
+which is available at https://www.eclipse.org/legal/epl-2.0/
+
+Contributors:
+     Artal Technologies - initial API and implementation
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>CapellaBridge</groupId>
+	<artifactId>com.artal.capella.bridge.parent</artifactId>
+	<version>1.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<properties>
+		<capella-version>1.4.X</capella-version>
+		<tycho-version>0.26.0</tycho-version>
+		<platform-version-name>mars</platform-version-name>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<repositories>
+		<!-- configure p2 repository to resolve against -->
+		<repository>
+			<id>Neon</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/releases/oxygen/</url>
+		</repository>
+		<repository>
+			<id>requirements</id>
+			<layout>p2</layout>
+			<url>http://odin.phedre.fr/p2_mirrors/capella_requirements/</url>
+			<!-- Mirror of https://download.eclipse.org/capella/addons/requirements/updates/releases/0.9.2/-->
+		</repository>
+		<repository>
+			<id>capella</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/capella/core/updates/releases/1.4.0-R20191121-173601/org.polarsys.capella.rcp.site/
+			</url>
+		</repository>
+		<repository>
+			<id>kitalpha</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/kitalpha/updates/release/runtimecore/1.4.0/
+			</url>
+		</repository>
+		<repository>
+			<id>kitalpha-sdk</id>
+			<url>https://download.eclipse.org/kitalpha/updates/release/sdk/1.4.0/
+			</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>sirius</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/sirius/updates/releases/6.1.2/oxygen/</url>
+		</repository>
+		<repository>
+			<id>siriuslegacy</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/sirius/updates/legacy/1.1.0</url>
+		</repository>
+		<repository>
+			<id>amalgam</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/modeling/amalgam/updates/releases/1.8.0/oxygen/</url>
+		</repository>
+		<repository>
+			<id>diffmerge</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/diffmerge/releases/0.12.0/emf-diffmerge-site/
+			</url>
+		</repository>
+		<repository>
+			<id>coevolution</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/diffmerge/releases/0.12.0/edm-coevolution-site/
+			</url>
+		</repository>
+
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>CapellaBridge</groupId>
+			<artifactId>org.eclipse.emf.diffmerge.bridge.capella.integration</artifactId>
+			<version>0.8.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>CapellaBridge</groupId>
+			<artifactId>org.eclipse.emf.diffmerge.bridge.uml</artifactId>
+			<version>0.9.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- -->
+				<!-- enable tycho build extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<!-- <resolver>p2</resolver> -->
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					<pomDependencies>consider</pomDependencies>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

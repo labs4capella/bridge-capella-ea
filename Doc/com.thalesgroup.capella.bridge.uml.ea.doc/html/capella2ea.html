@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="author" content="Thales">
+<title>Capella to Enterprise Architect Extension User Guide</title>
+<link rel="stylesheet" href="./css/doc.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Capella to Enterprise Architect Extension User Guide</h1>
+<div class="details">
+<span id="author" class="author">Thales Global Services</span><br>
+<span id="email" class="email"></span><br>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">2020/02/28</span>
+<br><span id="revremark">First Draft</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">1. Introduction</a></li>
+<li><a href="#_procedure_installation">2. Procedure installation</a>
+<ul class="sectlevel2">
+<li><a href="#_product_description">2.1. Product description</a></li>
+<li><a href="#_drop_in_installation">2.2. Drop-in installation</a></li>
+<li><a href="#_updatesite_installation">2.3. UpdateSite installation</a></li>
+<li><a href="#_check_extension_installation">2.4. Check extension installation</a></li>
+</ul>
+</li>
+<li><a href="#_export_from_capella">3. Export from Capella</a>
+<ul class="sectlevel2">
+<li><a href="#_pre_requisite">3.1. Pre-requisite</a></li>
+<li><a href="#_launch_the_export_model">3.2. Launch the Export model</a></li>
+</ul>
+</li>
+<li><a href="#_import_to_enterprise_architect">4. Import to Enterprise Architect</a>
+<ul class="sectlevel2">
+<li><a href="#_import_mdg_technologies">4.1. Import MDG technologies</a></li>
+<li><a href="#_create_a_new_enterprise_architect_project">4.2. Create a new Enterprise Architect Project.</a></li>
+<li><a href="#_import_enterprise_architect_model">4.3. Import Enterprise Architect model</a></li>
+<li><a href="#_inspect_import_results">4.4. Inspect Import results</a></li>
+<li><a href="#_merge_in_enterprise_architect">4.5. Merge in Enterprise Architect</a></li>
+</ul>
+</li>
+<li><a href="#_transformation_rules">5. Transformation rules</a>
+<ul class="sectlevel2">
+<li><a href="#_logical_architecture_transformation">5.1. Logical Architecture transformation</a></li>
+<li><a href="#_alternative_physical_architecture_transformation">5.2. Alternative Physical Architecture transformation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_introduction">1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here is the user guide of the Capella to Enterprise Architect extension.</p>
+</div>
+<div class="paragraph">
+<p>This extension allows to transform a Capella model to an Enterprise Architect model.
+This manual is composed of three sections:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Installation</strong>: description of the extension installation</p>
+</li>
+<li>
+<p><strong>Capella</strong>: description of the capella extension and how to use it</p>
+</li>
+<li>
+<p><strong>Enterprise Architect</strong>: explains how to import the model exported from Capella into Enterprise Architect.</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procedure_installation">2. Procedure installation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_product_description">2.1. Product description</h3>
+<div class="paragraph">
+<p>The product is delivered as a ZIP archive: <strong>Delivery_CapellaEABridge_X.Y.Z.zip</strong>, where "X.Y.Z" represents the current version of the extension.</p>
+</div>
+<div class="paragraph">
+<p>The ZIP archive contains the extension products for the both <strong>1.3.x</strong> and <strong>1.4.x</strong> Capella versions.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Delivery_versions.JPG" alt="CAPUML_Delivery_versions.JPG">
+</div>
+<div class="title">Figure 1. Compatible Capella versions.</div>
+</div>
+<div class="paragraph">
+<p>For each Capella version, a <strong>drop-in</strong> and an <strong>update site</strong> are delivered.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_dropins_udaptesites.JPG" alt="CAPUML_dropins_udaptesites.JPG">
+</div>
+<div class="title">Figure 2. Dropins and Update-site are delivered.</div>
+</div>
+<div class="paragraph">
+<p>A drop-in is delivered as ZIP archive: <strong>CapellaEABridge_VP-X.Y.Z-dropins.zip</strong>, where X.Y.Z is the version of the extension.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_dropins.JPG" alt="CAPUML_dropins.JPG">
+</div>
+<div class="title">Figure 3. Dropin delivery.</div>
+</div>
+<div class="paragraph">
+<p>An update site is delivered as ZIP archive: <strong>CapellaEABridge_X.Y.Z_updatesite.zip</strong>, where X.Y.Z the version of the extension.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_updatesites.JPG" alt="CAPUML_updatesites.JPG">
+</div>
+<div class="title">Figure 4. Update-site delivery.</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_drop_in_installation">2.2. Drop-in installation</h3>
+<div class="paragraph">
+<p>Unzip the Delivery_CapellaEABridge_X.Y.Z.zip archive.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Extract_delivery.JPG" alt="CAPUML_Extract_delivery.JPG">
+</div>
+<div class="title">Figure 5. Delivery Extraction.</div>
+</div>
+<div class="paragraph">
+<p>Open the <strong>dropins</strong> directory.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_dropin_to_copied.JPG" alt="CAPUML_dropin_to_copied.JPG">
+</div>
+<div class="title">Figure 6. Dropin to copied</div>
+</div>
+<div class="paragraph">
+<p>Copy/paste and unzip the CapellaEABridge_X.Y.Z-dropins.zip into the <strong>dropins</strong> directory of the Capella_X.Y.Z installation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Extract_dropin.JPG" alt="CAPUML_Extract_dropin.JPG">
+</div>
+<div class="title">Figure 7. Extract dropin.</div>
+</div>
+<div class="paragraph">
+<p>It is then possible to delete the CapellaEABridge_X.Y.Z-dropins.zip archive.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_updatesite_installation">2.3. UpdateSite installation</h3>
+<div class="paragraph">
+<p>Unzip Delivery_CapellaEABridge_X.Y.Z.zip archive.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Extract_delivery.JPG" alt="CAPUML_Extract_delivery.JPG">
+</div>
+<div class="title">Figure 8. Delivery Extraction.</div>
+</div>
+<div class="paragraph">
+<p>Execute the Capella software.</p>
+</div>
+<div class="paragraph">
+<p>In the Capella "Help" menu, select "Install New Software&#8230;&#8203;".</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_install_software.JPG" alt="CAPUML_install_software.JPG">
+</div>
+<div class="title">Figure 9. Menu to install new update site.</div>
+</div>
+<div class="paragraph">
+<p>In the opened wizard, click on the "Add&#8230;&#8203;" button and choose the <strong>CapellaEABridge_X.Y.Z_updatesite.zip</strong> archive.
+Set CapellaEABridge in the "Name" field.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Add_Repo.JPG" alt="CAPUML_Add_Repo.JPG">
+</div>
+<div class="title">Figure 10. Add CapellaEABridge repository.</div>
+</div>
+<div class="paragraph">
+<p>Select the CapellaEABridge feature and click on the "Next" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_SelectFeature.JPG" alt="CAPUML_SelectFeature.JPG">
+</div>
+<div class="title">Figure 11. Select the new feature.</div>
+</div>
+<div class="paragraph">
+<p>Click again on the "Next" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_ReviewItemtoInstall.JPG" alt="CAPUML_ReviewItemtoInstall.JPG">
+</div>
+<div class="title">Figure 12. Review the items to be installed.</div>
+</div>
+<div class="paragraph">
+<p>Accept the terms of the licence agreement and click on the "Finish" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Licenses.JPG" alt="CAPUML_Licenses.JPG">
+</div>
+<div class="title">Figure 13. Accept license agreement.</div>
+</div>
+<div class="paragraph">
+<p>Once the CapellaEABridge udapte site is installed, you must restart Capella to activate it.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_check_extension_installation">2.4. Check extension installation</h3>
+<div class="paragraph">
+<p>After installation procedure, launch Capella.</p>
+</div>
+<div class="paragraph">
+<p>Check in the plugins installation CapellaEABridge is correctly installed.</p>
+</div>
+<div class="paragraph">
+<p>In the Capella "Help" menu, select "About Capella".</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_AboutCapella.JPG" alt="CAPUML_AboutCapella.JPG">
+</div>
+<div class="title">Figure 14. About Capella.</div>
+</div>
+<div class="paragraph">
+<p>In the opened wizard, select "Installation details" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_InstallationDetails.JPG" alt="CAPUML_InstallationDetails.JPG">
+</div>
+<div class="title">Figure 15. Installation details.</div>
+</div>
+<div class="paragraph">
+<p>Check the Capella to Enterprise Architecture feature exists.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_Installation.JPG" alt="CAPUML_Installation.JPG">
+</div>
+<div class="title">Figure 16. Capella to Enterprise feature.</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_export_from_capella">3. Export from Capella</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pre_requisite">3.1. Pre-requisite</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A Capella Project: the goal of the Capella to Enterprise Architect extension is to transform an existing capella project into a EA model stored in a XMI/UML file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the following sections, the <strong>Camera SysML2 Example</strong> Capella project is used to illustrate the process.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_CapellaProject.JPG" alt="CAPUML_CapellaProject.JPG">
+</div>
+<div class="title">Figure 17. Capella project example.</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_launch_the_export_model">3.2. Launch the Export model</h3>
+<div class="sect3">
+<h4 id="_open_contextual_model_transformation_menu">3.2.1. Open Contextual "Model transformation" menu</h4>
+<div class="paragraph">
+<p>Right click on a Capella Element, and select the "Model transformation" menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_ExportsMenu.JPG" alt="CAPUML_ExportsMenu.JPG">
+</div>
+<div class="title">Figure 18. Exports menu</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configure_the_export_wizard">3.2.2. Configure the Export wizard</h4>
+<div class="paragraph">
+<p>The opened wizard shall be filled with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The type of the transformation.</p>
+</li>
+<li>
+<p>The path of the target file.</p>
+</li>
+<li>
+<p>The (predefined) algorithm to use.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_ExportWizard.JPG" alt="CAPUML_ExportWizard.JPG">
+</div>
+<div class="title">Figure 19. Export wizard.</div>
+</div>
+<div class="paragraph">
+<p>Select the type of the transformation: the field proposes the "Capella to Enterprise Architect" type.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_TypeTransfo.JPG" alt="CAPUML_TypeTransfo.JPG">
+</div>
+<div class="title">Figure 20. Type of transformation.</div>
+</div>
+<div class="paragraph">
+<p>Select a target file: set the target path or click on the "Browse&#8230;&#8203;" button.
+Using the opened wizard, all the existing xml files are displayed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_targetpath.JPG" alt="CAPUML_targetpath.JPG">
+</div>
+<div class="title">Figure 21. Selection output file.</div>
+</div>
+<div class="paragraph">
+<p>Select an existing xml file, or set a new file name. Click on the "Open" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_SelectTargetPathWizard.JPG" alt="CAPUML_SelectTargetPathWizard.JPG">
+</div>
+<div class="title">Figure 22. Export wizard.</div>
+</div>
+<div class="paragraph">
+<p>Select a predefined algorithm.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_AlgoSelection.JPG" alt="CAPUML_AlgoSelection.JPG">
+</div>
+<div class="title">Figure 23. Algorithm selection.</div>
+</div>
+<div class="paragraph">
+<p>The OK button is available only when the three fields are filled.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_FilledWizard.JPG" alt="CAPUML_FilledWizard.JPG">
+</div>
+<div class="title">Figure 24. Filled Exports wizard</div>
+</div>
+<div class="paragraph">
+<p>Click on the "OK" button.</p>
+</div>
+<div class="paragraph">
+<p>The Enterprise Architect model is built and persisted in the generated output xml file.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_pvmt_and_physical_architecture_options">3.2.3. PVMT and Physical Architecture options</h4>
+<div class="paragraph">
+<p>In the "Model transformation" wizard, in the case where "Capella to Enterprise Architect" type is selected, a check button "Export profiles" appears.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_ExportProfile.JPG" alt="CAPUML_ExportProfile.JPG">
+</div>
+<div class="title">Figure 25. Export profiles.</div>
+</div>
+<div class="paragraph">
+<p>This option allows to export PVMT data as UML profile.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/CAPUML_PVMTtoProfiles.JPG" alt="CAPUML_PVMTtoProfiles.JPG">
+</div>
+<div class="title">Figure 26. PVMT data to UML profiles.</div>
+</div>
+<div class="paragraph">
+<p>The profiles will be exported into a XML file naming "MDG_CapellaProfile_xxxxx" with xxxx is the export date.
+This file is exported in the same path than the target file.</p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_import_to_enterprise_architect">4. Import to Enterprise Architect</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_import_mdg_technologies">4.1. Import MDG technologies</h3>
+<div class="paragraph">
+<p>In the case where profiles has been exported from Capella (&lt;PVMT options&gt;), It&#8217;s necessary to import these profiles in Enterprise Architect.
+In this way, the user can use this profile in Enterprise Architect software.</p>
+</div>
+<div class="paragraph">
+<p>Start Enterprise Architect.
+In the Enterprise Architect ribbon, select "Start &#8594; Share &#8594; Resources" menu.</p>
+</div>
+<div class="paragraph">
+<p>The Resources browser is displayed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_Resources.JPG" alt="EA_Resources.JPG">
+</div>
+<div class="title">Figure 27. EA Resources.</div>
+</div>
+<div class="paragraph">
+<p>In the "MDG Technologies" node, right click and select the "Import Technology" menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ImportTechnology.JPG" alt="EA_ImportTechnology.JPG">
+</div>
+<div class="title">Figure 28. Import Technology.</div>
+</div>
+<div class="paragraph">
+<p>"Import MDG Technology" wizard is displayed. In the "Filename" field, select the MGG_CapellaProfile_xxxx.xml exported from Capella.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ImportMDGTechnologyWizard.JPG" alt="EA_ImportMDGTechnologyWizard.JPG">
+</div>
+<div class="title">Figure 29. Import MDG Technology wizard.</div>
+</div>
+<div class="paragraph">
+<p>In this wizard, the others fields are automatically filled.
+Click on "OK" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_CapellaProfile.JPG" alt="EA_CapellaProfile.JPG">
+</div>
+<div class="title">Figure 30. Capella profiles added.</div>
+</div>
+<div class="paragraph">
+<p>In the EA project, create a new Component.</p>
+</div>
+<div class="paragraph">
+<p>Select this component. In the "Properties" view, select the Stereotype field.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_StereoWizard.JPG" alt="EA_StereoWizard.JPG" width="Stereotypes wizard.">
+</div>
+</div>
+<div class="paragraph">
+<p>In the "Perpective" field, select "Specialized &#8594; Model Technologies" value.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ModelTechnologies.JPG" alt="EA_ModelTechnologies.JPG">
+</div>
+<div class="title">Figure 31. Model Technologies perspective.</div>
+</div>
+<div class="paragraph">
+<p>In the "Profile" field, several profiles are available In the "Profile" field, several profiles are available, including profiles imported from Capella.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ProfileCapella.JPG" alt="EA_ProfileCapella.JPG">
+</div>
+<div class="title">Figure 32. Profiles from Capella.</div>
+</div>
+<div class="paragraph">
+<p>In this list, select a profile.
+All the compatible stereotypes from the profile with selected element are displayed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_StereoCapella.JPG" alt="EA_StereoCapella.JPG">
+</div>
+<div class="title">Figure 33. Stereotypes from Capella.</div>
+</div>
+<div class="paragraph">
+<p>Select stereotype and click on "OK" button.
+The stereotype is applied on the Component.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_a_new_enterprise_architect_project">4.2. Create a new Enterprise Architect Project.</h3>
+<div class="paragraph">
+<p>Start Enterprise Architect.
+Click on the "New File" menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_NewProject.JPG" alt="EA_NewProject.JPG">
+</div>
+<div class="title">Figure 34. New project&#8230;&#8203;</div>
+</div>
+<div class="paragraph">
+<p>In the displayed standard Windows file browser dialog, locate a suitable folder for your project and, in the "File name" field, type in a distinctive name.
+Click on the "Save" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_CreateProject.JPG" alt="EA_CreateProject.JPG">
+</div>
+<div class="title">Figure 35. Create a new project.</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_import_enterprise_architect_model">4.3. Import Enterprise Architect model</h3>
+<div class="paragraph">
+<p>In the "Browser" explorer, select the "Model" node.</p>
+</div>
+<div class="paragraph">
+<p>In the Enterprise Architect ribbon, select "Publish &#8594; Model Exchange &#8594; Import XMI &#8594; Import Package from XMI" menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_Import.JPG" alt="EA_Import.JPG">
+</div>
+<div class="title">Figure 36. Import XML file.</div>
+</div>
+<div class="paragraph">
+<p>In the displayed "Import Package from XMI" dialog:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Filename</strong> field: type the directory path and filename from which to import the XMI file.</p>
+</li>
+<li>
+<p><strong>Baseline Package after import</strong> checkbox: Select this checkbox to open the "Create Baseline" dialog, through which to baseline the imported Package once the import is complete.</p>
+</li>
+<li>
+<p><strong>Import</strong> button: Click on this button to start the import</p>
+</li>
+<li>
+<p><strong>Close</strong> button: Click on this button to close the dialog.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ImportWizard.JPG" alt="EA_ImportWizard.JPG">
+</div>
+<div class="title">Figure 37. Import XML wizard.</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_NewBaseLine.JPG" alt="EA_NewBaseLine.JPG">
+</div>
+<div class="title">Figure 38. New Baseline.</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inspect_import_results">4.4. Inspect Import results</h3>
+<div class="paragraph">
+<p>In the "Browser" explorer, the imported data are displayed.
+Under the "Model" node, "Import Capella" package is created. This package contains all imported data from Capella.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_Model.JPG" alt="EA_Model.JPG">
+</div>
+<div class="title">Figure 39. EA model.</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Create a component diagram and drag and drop all components inside.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_Component_diagram.JPG" alt="EA_Component_diagram.JPG">
+</div>
+<div class="title">Figure 40. Component diagram.</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p>Create a Class diagram and drag and drop all others elements.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ClassDiagram.JPG" alt="EA_ClassDiagram.JPG">
+</div>
+<div class="title">Figure 41. Class diagram.</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_merge_in_enterprise_architect">4.5. Merge in Enterprise Architect</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/MergeScenario.JPG" alt="MergeScenario.JPG">
+</div>
+<div class="title">Figure 42. Merge scenario.</div>
+</div>
+<div class="paragraph">
+<p>This schema shows the different steps to execute a merge in Enterprise Architect.
+The merge process allows to compare the last version of the EA model with a previous version and to choose to keep old or new data.</p>
+</div>
+<div class="paragraph">
+<p>In Capella software, modify the name of the following Capella elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Camera power button" component name to "Camera power button from Capella"</p>
+</li>
+<li>
+<p>"Sensor Command" exchange item name to "Sensor Command from Capella"</p>
+</li>
+<li>
+<p>"Timestamp" class name to "Timestamp from Capella".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Export the Capella model as it&#8217;s describe in the <a href="#_export_from_capella">Export from Capella</a> section.</p>
+</div>
+<div class="paragraph">
+<p>In Enterprise Architect, in the previously imported model, modify the name of the following EA elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Camera power button" component to "Camera power button from EA"</p>
+</li>
+<li>
+<p>"Sensor Command" operation to "Sensor Command from EA"</p>
+</li>
+<li>
+<p>"Explosure Triangle"  datatype to "Explosure Triangle from EA".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It&#8217;s very important to increment the version of the Enterprise Architect model after the last modification.
+This version allows to have a tag to compare with the new import to merge.</p>
+</div>
+<div class="paragraph">
+<p>In the Enterprise Architect ribbon, select "Design &#8594; Model &#8594; Manage &#8594; Manage Baselines&#8230;&#8203;" menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ManageBaselines.JPG" alt="EA_ManageBaselines.JPG">
+</div>
+<div class="title">Figure 43. Manage Baselines&#8230;&#8203;</div>
+</div>
+<div class="paragraph">
+<p>In the displayed Baselines dialog:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_BaselineDialog.JPG" alt="EA_BaselineDialog.JPG">
+</div>
+<div class="title">Figure 44. Baselines dialog.</div>
+</div>
+<div class="paragraph">
+<p>Select the "New Baseline" button. In the "New Baseline" dialog, type the new version name in the version field.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_NewBaselineWizard.JPG" alt="EA_NewBaselineWizard.JPG">
+</div>
+<div class="title">Figure 45. New Baseline.</div>
+</div>
+<div class="paragraph">
+<p>In the Baselines dialog, the new version is added in the top of the list.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_NewVersion.JPG" alt="EA_NewVersion.JPG">
+</div>
+<div class="title">Figure 46. New version.</div>
+</div>
+<div class="paragraph">
+<p>And click in "Close" Button.</p>
+</div>
+<div class="paragraph">
+<p>Select the Import Capella package in the "Browser" explorer and import the last version of the Capella export file as describe in the <a href="#_import_enterprise_architect_model">Import Enterprise Architect model</a> section.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_NewImportForMerge.JPG" alt="EA_NewImportForMerge.JPG">
+</div>
+<div class="title">Figure 47. Import Package from XML</div>
+</div>
+<div class="paragraph">
+<p>In the Import Package from XML dialog, after to configure when describe in the above screeshot, click on the "Import" Button.
+<strong>Warning</strong> don&#8217;t use the "Merge" Button. The exported Capella file is write in XMI 2.1/ UML 2.1 format. The EA merge doesn&#8217;t support XMI and UML version upper than 1.3.</p>
+</div>
+<div class="paragraph">
+<p>After the import, the "New Baseline" is displayed. In the "Version" field, type a new name version.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/NewBaseLinesForMerge.JPG" alt="NewBaseLinesForMerge.JPG">
+</div>
+<div class="title">Figure 48. New BaseLine.</div>
+</div>
+<div class="paragraph">
+<p>Click on "OK" button. And Click on "Close" button in the "Import Package from XML" dialog.</p>
+</div>
+<div class="paragraph">
+<p>In the "Browser" explorer, all the data modified before the last import are removed.</p>
+</div>
+<div class="paragraph">
+<p>In the Enterprise Architect ribbon, select "Design &#8594; Model &#8594; Manage &#8594; Manage Baselines&#8230;&#8203;" menu.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_BaselineVersionToMerge.JPG" alt="EA_BaselineVersionToMerge.JPG">
+</div>
+<div class="title">Figure 49. Baselines.</div>
+</div>
+<div class="paragraph">
+<p>In the displayed dialog, select the version before the last import.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_SelectLastVersion.JPG" alt="EA_SelectLastVersion.JPG">
+</div>
+<div class="title">Figure 50. Select previous version.</div>
+</div>
+<div class="paragraph">
+<p>And click on the "Show Differences" button.</p>
+</div>
+<div class="paragraph">
+<p>The "Baseline Comparison" view is opened and display the differences between the two compared versions.</p>
+</div>
+<div class="paragraph">
+<p><strong>Warning:</strong> In the Capella software, the both created and modified dates aren&#8217;t managed for the Capella element.
+For this reason, in Enterprise Architect is possible to ignore the dates differences.
+In the "Baseline Comparison" toolbar, click on the "Baseline comparison options" button.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_ComparisonButton.JPG" alt="EA_ComparisonButton.JPG">
+</div>
+<div class="title">Figure 51. Comparison options.</div>
+</div>
+<div class="paragraph">
+<p>Check the both "Supress Date Modified" and "Supress Date Created" options. These options allow to ignore the dates informations in the "Baseline Comparison" view.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_Baseline_Comparison.JPG" alt="EA_Baseline_Comparison.JPG">
+</div>
+<div class="title">Figure 52. Baseline comparison.</div>
+</div>
+<div class="paragraph">
+<p>If the Enterprise Architect user want keep the old value, select the element in the "Model Elements" explorer and click on the green arrow.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_keepoldversion.JPG" alt="EA_keepoldversion.JPG">
+</div>
+<div class="title">Figure 53. Keep old version.</div>
+</div>
+<div class="paragraph">
+<p>Click on the "OK" button in the opened message dialog.</p>
+</div>
+<div class="paragraph">
+<p>The element is removed from the "Baseline Comparison" view and is updated in the EA model.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/EA_UpdatedModel.JPG" alt="EA_UpdatedModel.JPG">
+</div>
+<div class="title">Figure 54. Updated model.</div>
+</div>
+<div class="paragraph">
+<p>The last step, is to create a new Baselines after the merge.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transformation_rules">5. Transformation rules</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_logical_architecture_transformation">5.1. Logical Architecture transformation</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/TableRule.JPG" alt="TableRule.JPG">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alternative_physical_architecture_transformation">5.2. Alternative Physical Architecture transformation</h3>
+<div class="imageblock">
+<div class="content">
+<img src="images/AlternativeTransfo.JPG" alt="AlternativeTransfo.JPG">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 1.0<br>
+Last updated 2020-04-09 14:32:24 +02:00
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+<script>hljs.initHighlighting()</script>
+</body>
+</html>

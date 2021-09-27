@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="thecustomprofile" nsPrefix="thecustomprofile" name="thecustomprofile" metamodelReference="mmref01">
+	<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="thecustomprofile">
+		<body> Version:1.0</body>
+	</ownedComment>
+	<packageImport xmi:id="mmref01">
+		<importedPackage href="http://www.eclipse.org/uml2/5.0.0/UML" />
+	</packageImport>
+	<packagedElement xmi:type="uml:Stereotype" xmi:id="entity" name="entity">
+		<ownedAttribute xmi:type="uml:Property" xmi:id="entity-base_Class" name="base_Class" association="Class_entity" type="http://www.eclipse.org/uml2/5.0.0/UML">
+			<type href="http://www.eclipse.org/uml2/5.0.0/UML" />
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement xmi:type="uml:Extension" xmi:id="Class_entity" name="A_Class_entity" memberEnd="extension_entity entity-base_Class">
+		<ownedEnd xmi:id="extension_entity" name="extension_entity" type="entity" isComposite="true" lower="0" upper="1" memberEnd="extension_entity entity-base_Class" />
+	</packagedElement>
+</uml:Profile>

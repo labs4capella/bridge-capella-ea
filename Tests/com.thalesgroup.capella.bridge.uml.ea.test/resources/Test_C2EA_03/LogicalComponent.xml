@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+  <uml:Model xmi:id="MX_EAID_19e60813-926b-4ea9-895c-8205150587b9" name="EA_Model" visibility="public">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" name="Transformed from Capella Logical Architecture (partially)">
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_5df8e86b-154b-433c-b10f-0912ef50c567" name="Data"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_90a443f9-680a-4ac7-be8d-b34712715d35" name="Interfaces"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="EAID_a1a0aedb-033c-46df-b241-babba7c27e00" name="Logical System">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_3ff77811-1739-4763-84af-6a059de4ddcdp" aggregation="composite" association="EAID_3ff77811-1739-4763-84af-6a059de4ddcda">
+          <type xmi:idref="EAID_3ff77811-1739-4763-84af-6a059de4ddcd"></type>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6p" aggregation="composite" association="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6a">
+          <type xmi:idref="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6"></type>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_520ef5e7-5607-450c-983e-407bc5f36e3dp" aggregation="composite" association="EAID_520ef5e7-5607-450c-983e-407bc5f36e3da">
+          <type xmi:idref="EAID_520ef5e7-5607-450c-983e-407bc5f36e3d"></type>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9p" aggregation="composite" association="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9a">
+          <type xmi:idref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9"></type>
+        </ownedAttribute>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="EAID_5fe32054-2d04-438f-8664-63327dba6b91" name="C 1" kind="assembly">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_5fe32054-2d04-438f-8664-63327dba6b91sourcePort" role="EAID_20900582-3c08-4082-8466-88063525e02d"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_5fe32054-2d04-438f-8664-63327dba6b91targetPort" role="EAID_0ab3bd4f-9b00-4267-ad98-c916ce237f3d"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="EAID_9fd65647-5a7e-43b0-bb72-abe034d512f9" name="C 2" kind="assembly">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_9fd65647-5a7e-43b0-bb72-abe034d512f9sourcePort" role="EAID_64e00040-aa95-439e-a443-fe3ecea3336f"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_9fd65647-5a7e-43b0-bb72-abe034d512f9targetPort" role="EAID_76a92089-a8de-4884-8aff-78ab1b944491"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="EAID_9a047074-0e96-4abe-a892-eb76c8b96b75" name="C 3" kind="assembly">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_9a047074-0e96-4abe-a892-eb76c8b96b75sourcePort" role="EAID_0b10af40-9e37-4058-ad74-f79498ae960b"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_9a047074-0e96-4abe-a892-eb76c8b96b75targetPort" role="EAID_ea70525f-0d7c-4351-a091-e53f930b9245"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="EAID_37d9d1c7-8481-4108-96f0-da6d665ca50d" name="C 1" kind="assembly">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_37d9d1c7-8481-4108-96f0-da6d665ca50dsourcePort" role="EAID_07ab2fc2-e32d-4e84-a8fa-8ef596b14ee7"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="EAID_37d9d1c7-8481-4108-96f0-da6d665ca50dtargetPort" role="EAID_eb55ef3d-17cf-453f-8883-5583242b9302"/>
+        </ownedConnector>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_3ff77811-1739-4763-84af-6a059de4ddcd" name="LC 1">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_20900582-3c08-4082-8466-88063525e02d" name="CP 1" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_64e00040-aa95-439e-a443-fe3ecea3336f" name="CP 2" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6" name="LC 2">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_ea70525f-0d7c-4351-a091-e53f930b9245" name="CP 2" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9p" aggregation="composite" association="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9a">
+            <type xmi:idref="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9"></type>
+          </ownedAttribute>
+          <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9" name="LC 1">
+            <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_0ab3bd4f-9b00-4267-ad98-c916ce237f3d" name="CP 1" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+          </nestedClassifier>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_520ef5e7-5607-450c-983e-407bc5f36e3d" name="LC 3">
+          <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_76a92089-a8de-4884-8aff-78ab1b944491" name="CP 1" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+          <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_0b10af40-9e37-4058-ad74-f79498ae960b" name="CP 2" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9" name="LC 4">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54p" aggregation="composite" association="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54a">
+            <type xmi:idref="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54"></type>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5p" aggregation="composite" association="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5a">
+            <type xmi:idref="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5"></type>
+          </ownedAttribute>
+          <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54" name="LC 1">
+            <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_07ab2fc2-e32d-4e84-a8fa-8ef596b14ee7" name="CP 1" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Component" xmi:id="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5" name="LC 2">
+            <ownedAttribute xmi:type="uml:Port" xmi:id="EAID_eb55ef3d-17cf-453f-8883-5583242b9302" name="CP 1" isUnique="false" aggregation="composite" isBehavior="true" isService="false"/>
+          </nestedClassifier>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9a" memberEnd="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9tp EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9p">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9tp" association="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9a">
+          <type xmi:idref="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54a" memberEnd="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54tp EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54p">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54tp" association="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54a">
+          <type xmi:idref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5a" memberEnd="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5tp EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5p">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5tp" association="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5a">
+          <type xmi:idref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_3ff77811-1739-4763-84af-6a059de4ddcda" memberEnd="EAID_3ff77811-1739-4763-84af-6a059de4ddcdtp EAID_3ff77811-1739-4763-84af-6a059de4ddcdp">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_3ff77811-1739-4763-84af-6a059de4ddcdtp" association="EAID_3ff77811-1739-4763-84af-6a059de4ddcda">
+          <type xmi:idref="EAID_a1a0aedb-033c-46df-b241-babba7c27e00"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6a" memberEnd="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6tp EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6p">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6tp" association="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6a">
+          <type xmi:idref="EAID_a1a0aedb-033c-46df-b241-babba7c27e00"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_520ef5e7-5607-450c-983e-407bc5f36e3da" memberEnd="EAID_520ef5e7-5607-450c-983e-407bc5f36e3dtp EAID_520ef5e7-5607-450c-983e-407bc5f36e3dp">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_520ef5e7-5607-450c-983e-407bc5f36e3dtp" association="EAID_520ef5e7-5607-450c-983e-407bc5f36e3da">
+          <type xmi:idref="EAID_a1a0aedb-033c-46df-b241-babba7c27e00"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9a" memberEnd="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9tp EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9p">
+        <ownedEnd xmi:type="uml:Property" xmi:id="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9tp" association="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9a">
+          <type xmi:idref="EAID_a1a0aedb-033c-46df-b241-babba7c27e00"></type>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_d631b681-68b7-4d5c-a995-c2910d7f79d8" name="Structure"/>
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements xmi:type="xmi:elements">
+      <element xmi:type="xmi:element" xmiidref="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_a1a0aedb-033c-46df-b241-babba7c27e00">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_3ff77811-1739-4763-84af-6a059de4ddcd">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_a1a0aedb-033c-46df-b241-babba7c27e00" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_a1a0aedb-033c-46df-b241-babba7c27e00" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_520ef5e7-5607-450c-983e-407bc5f36e3d">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_a1a0aedb-033c-46df-b241-babba7c27e00" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_a1a0aedb-033c-46df-b241-babba7c27e00" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_20900582-3c08-4082-8466-88063525e02d">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_64e00040-aa95-439e-a443-fe3ecea3336f">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_0ab3bd4f-9b00-4267-ad98-c916ce237f3d">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_ea70525f-0d7c-4351-a091-e53f930b9245">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_76a92089-a8de-4884-8aff-78ab1b944491">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_0b10af40-9e37-4058-ad74-f79498ae960b">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_d5423c89-0985-4879-be08-9fdd33f933a3" owner="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9" tpos="0" ea_eletype="element"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_07ab2fc2-e32d-4e84-a8fa-8ef596b14ee7">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_eb55ef3d-17cf-453f-8883-5583242b9302">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+    </elements>
+    <connectors xmi:type="xmi:connectors">
+      <connector xmi:type="xmi:connector" xmiidref="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9a">
+        <source xmi:type="xmi:source" xmiidref="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9p">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_ffade254-1cd1-4c6b-b5f2-772ea79fe1f9tp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54a">
+        <source xmi:type="xmi:source" xmiidref="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54p">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_6dc3894a-854a-45a1-bb0e-7692ddcaeb54tp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5a">
+        <source xmi:type="xmi:source" xmiidref="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5p">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_0daace1d-fcec-4dd5-9afd-a20affe48fd5tp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_3ff77811-1739-4763-84af-6a059de4ddcda">
+        <source xmi:type="xmi:source" xmiidref="EAID_3ff77811-1739-4763-84af-6a059de4ddcdp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_3ff77811-1739-4763-84af-6a059de4ddcdtp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6a">
+        <source xmi:type="xmi:source" xmiidref="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6p">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_6df303eb-8bcb-40aa-8985-48d1d74402c6tp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_520ef5e7-5607-450c-983e-407bc5f36e3da">
+        <source xmi:type="xmi:source" xmiidref="EAID_520ef5e7-5607-450c-983e-407bc5f36e3dp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_520ef5e7-5607-450c-983e-407bc5f36e3dtp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9a">
+        <source xmi:type="xmi:source" xmiidref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9p">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_5975afcc-b6c9-44d5-be0d-581eefbb06b9tp">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+        <properties xmi:type="xmi:properties" ea_type="Association" direction="Unspecified"/>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_5fe32054-2d04-438f-8664-63327dba6b91">
+        <source xmi:type="xmi:source" xmiidref="EAID_20900582-3c08-4082-8466-88063525e02d">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_0ab3bd4f-9b00-4267-ad98-c916ce237f3d">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_9fd65647-5a7e-43b0-bb72-abe034d512f9">
+        <source xmi:type="xmi:source" xmiidref="EAID_64e00040-aa95-439e-a443-fe3ecea3336f">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_76a92089-a8de-4884-8aff-78ab1b944491">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_9a047074-0e96-4abe-a892-eb76c8b96b75">
+        <source xmi:type="xmi:source" xmiidref="EAID_0b10af40-9e37-4058-ad74-f79498ae960b">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_ea70525f-0d7c-4351-a091-e53f930b9245">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+      </connector>
+      <connector xmi:type="xmi:connector" xmiidref="EAID_37d9d1c7-8481-4108-96f0-da6d665ca50d">
+        <source xmi:type="xmi:source" xmiidref="EAID_07ab2fc2-e32d-4e84-a8fa-8ef596b14ee7">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </source>
+        <target xmi:type="xmi:target" xmiidref="EAID_eb55ef3d-17cf-453f-8883-5583242b9302">
+          <role xmi:type="xmi:role" visibility="Public"/>
+        </target>
+      </connector>
+    </connectors>
+  </xmi:Extension>
+</xmi:XMI>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+  <uml:Model xmi:id="MX_EAID_d53562f0-35b0-499f-aa13-dee420b05811" name="EA_Model" visibility="public">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAPK_249a0585-2007-488f-86ea-49fc1562950e" name="Transformed from Capella Logical Architecture (partially)">
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_297e3d57-03b7-4459-a905-d908c0b209aa" name="Data"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_0caf970a-c818-4de8-b82f-fad6d81385a2" name="Interfaces">
+        <packagedElement xmi:type="uml:Interface" xmi:id="EAID_797405d7-6582-4ead-8a30-5a678db76830" name="Interface 1">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="EAID_eb4c210b-9268-4feb-bc5e-3e135958333e" name="ExchangeItem 1"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="EAID_41829a0c-6140-4b59-a8c5-aecce60b41ee" name="Logical System"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_29777267-7557-41ab-a4de-f1faa40a9843" name="Structure"/>
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements xmi:type="xmi:elements">
+      <element xmi:type="xmi:element" xmiidref="EAPK_249a0585-2007-488f-86ea-49fc1562950e">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_797405d7-6582-4ead-8a30-5a678db76830">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_eb4c210b-9268-4feb-bc5e-3e135958333e">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_41829a0c-6140-4b59-a8c5-aecce60b41ee">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_249a0585-2007-488f-86ea-49fc1562950e" tpos="0" ea_eletype="element"/>
+      </element>
+    </elements>
+  </xmi:Extension>
+</xmi:XMI>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="com.artal.capella.bridge.export"
+               label="Transform model"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+               <iterate
+                     operator="or">
+                  <instanceof
+                        value="org.polarsys.capella.core.data.capellacore.CapellaElement">
+                  </instanceof>
+               </iterate>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.artal.capella.bridge.core.ui.TransfoExportHandler"
+            commandId="com.artal.capella.bridge.export">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.artal.capella.bridge.export"
+            name="Capella Exports">
+      </command>
+   </extension>
+</plugin>

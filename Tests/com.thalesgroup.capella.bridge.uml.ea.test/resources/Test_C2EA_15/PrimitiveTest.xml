@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+  <uml:Model xmi:id="MX_EAID_83b13c7a-fc0a-4c7c-aca4-509689a47a7c" name="EA_Model" visibility="public">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAPK_694f2f2f-3925-4774-bad8-e8c02e5654dd" name="Transformed from Capella Logical Architecture (partially)">
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_97fcbdd3-3625-494a-87c0-cc15ce1c1359" name="Data">
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_1a6b4d5b-f744-402a-aa33-65f6514f98e5" name="BooleanType 1"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_5864d84d-6b69-42a6-844d-7f47ee65f344" name="StringType 2"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="EAID_25d7fd1c-24bf-440e-8612-f6b51f2467e1" name="PhysicalQuantity 3"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAID_56067e31-3a38-49a9-af6d-92c525bf18f6" name="NumericType 4"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_97dc7e3c-848d-4f40-9453-58004c24b9d2" name="Interfaces"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="EAID_6aa5ffdf-fdce-419a-8e10-76d3a36531cf" name="Logical System"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_c71accde-ec14-4093-a2ac-67e0622363ac" name="Structure"/>
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements xmi:type="xmi:elements">
+      <element xmi:type="xmi:element" xmiidref="EAPK_694f2f2f-3925-4774-bad8-e8c02e5654dd">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_1a6b4d5b-f744-402a-aa33-65f6514f98e5">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <constraints xmi:type="xmi:constraints"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_5864d84d-6b69-42a6-844d-7f47ee65f344">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <constraints xmi:type="xmi:constraints"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_25d7fd1c-24bf-440e-8612-f6b51f2467e1">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <constraints xmi:type="xmi:constraints">
+          <constraint xmi:type="xmi:constraint" name="max = 2" type="Invariant" weight="0,00" status="Approved"/>
+          <constraint xmi:type="xmi:constraint" name="min = 1" type="Invariant" weight="0,00" status="Approved"/>
+        </constraints>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_56067e31-3a38-49a9-af6d-92c525bf18f6">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <constraints xmi:type="xmi:constraints"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_6aa5ffdf-fdce-419a-8e10-76d3a36531cf">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_694f2f2f-3925-4774-bad8-e8c02e5654dd" tpos="0" ea_eletype="element"/>
+      </element>
+    </elements>
+  </xmi:Extension>
+</xmi:XMI>

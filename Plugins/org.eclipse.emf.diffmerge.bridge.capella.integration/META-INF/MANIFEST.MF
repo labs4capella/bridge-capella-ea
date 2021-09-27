@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Bridge Mapping Capella Scopes
+Bundle-SymbolicName: org.eclipse.emf.diffmerge.bridge.capella.integration
+Bundle-Version: 0.12.0.qualifier
+Bundle-Activator: org.eclipse.emf.diffmerge.bridge.capella.integration.internal.Activator
+Require-Bundle: org.eclipse.emf.diffmerge.bridge.interactive,
+ org.eclipse.emf.diffmerge.bridge.mapping,
+ org.polarsys.capella.core.compare;bundle-version="1.4.0",
+ org.polarsys.capella.core.model.skeleton;bundle-version="1.4.0",
+ org.polarsys.capella.core.model.handler;bundle-version="1.4.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: org.eclipse.emf.diffmerge.bridge.capella.integration,
+ org.eclipse.emf.diffmerge.bridge.capella.integration.policies,
+ org.eclipse.emf.diffmerge.bridge.capella.integration.scopes,
+ org.eclipse.emf.diffmerge.bridge.capella.integration.util
+Bundle-Vendor: Eclipse Modeling Project
+Automatic-Module-Name: org.eclipse.emf.diffmerge.bridge.capella.integration

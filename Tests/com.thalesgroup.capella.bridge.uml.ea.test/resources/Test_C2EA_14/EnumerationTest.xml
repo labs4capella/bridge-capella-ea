@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+  <uml:Model xmi:id="MX_EAID_0fcca5dc-569b-48d4-9dce-aea7daa0a760" name="EA_Model" visibility="public">
+    <packagedElement xmi:type="uml:Package" xmi:id="EAPK_bc76bae0-8b49-47d2-a50d-55dae1fc28de" name="Transformed from Capella Logical Architecture (partially)">
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_70a10eeb-0508-4387-8e51-304952474e3c" name="Data">
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="EAID_6bc11de1-e2d0-4121-9f36-a26794b17a5e" name="Enumeration 1">
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_ccce0080-6aae-4811-a739-cd16b1c81604" name="EnumerationLiteral 1" classifier="EAID_6bc11de1-e2d0-4121-9f36-a26794b17a5e"/>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="EAID_756b47da-5a92-4e59-bc71-9c076043eefb" name="EnumerationLiteral 2" classifier="EAID_6bc11de1-e2d0-4121-9f36-a26794b17a5e"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_cf31cf4b-14a4-4909-bf7e-cd83532e5f29" name="Interfaces"/>
+      <packagedElement xmi:type="uml:Component" xmi:id="EAID_e8cef0d4-cdf6-4d9d-8d25-4af798ba734b" name="Logical System"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="EAPK_16de9a4e-ffb1-457f-a177-5db12412ceb5" name="Structure"/>
+    </packagedElement>
+  </uml:Model>
+  <xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+    <elements xmi:type="xmi:elements">
+      <element xmi:type="xmi:element" xmiidref="EAPK_bc76bae0-8b49-47d2-a50d-55dae1fc28de">
+        <xrefs xmi:type="xmi:xrefs"/>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_6bc11de1-e2d0-4121-9f36-a26794b17a5e">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <properties xmi:type="xmi:properties" sType="Enumeration" scope="public"/>
+        <attributes xmi:type="xmi:attributes">
+          <attribute xmi:type="xmi:attribute" xmiidref="EAID_ccce0080-6aae-4811-a739-cd16b1c81604" name="EnumerationLiteral 1">
+            <stereotype xmi:type="xmi:stereotype" stereotype="enum"/>
+          </attribute>
+          <attribute xmi:type="xmi:attribute" xmiidref="EAID_756b47da-5a92-4e59-bc71-9c076043eefb" name="EnumerationLiteral 2">
+            <stereotype xmi:type="xmi:stereotype" stereotype="enum"/>
+          </attribute>
+        </attributes>
+      </element>
+      <element xmi:type="xmi:element" xmiidref="EAID_e8cef0d4-cdf6-4d9d-8d25-4af798ba734b">
+        <xrefs xmi:type="xmi:xrefs"/>
+        <model xmi:type="xmi:model" package="EAPK_bc76bae0-8b49-47d2-a50d-55dae1fc28de" tpos="0" ea_eletype="element"/>
+      </element>
+    </elements>
+  </xmi:Extension>
+</xmi:XMI>
